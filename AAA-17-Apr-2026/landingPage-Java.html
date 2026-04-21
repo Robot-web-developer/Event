@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Landing Page</title>
+    <style>
+        /* Minimal reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; }
+    </style>
+</head>
+<body>
+<script>
+// Create and style the landing page entirely with JavaScript
+
+// Create container
+const container = document.createElement('div');
+container.style.height = '100vh';
+container.style.display = 'flex';
+container.style.flexDirection = 'column';
+container.style.justifyContent = 'center';
+container.style.alignItems = 'center';
+container.style.background = 'linear-gradient(135deg, #4facfe, #00f2fe)';
+container.style.color = 'cocacola';
+container.style.textAlign = 'center';
+document.body.appendChild(container);
+
+// Title
+const title = document.createElement('h1');
+title.textContent = 'Welcome to Our Landing Page';
+title.style.fontSize = '4rem';
+title.style.marginBottom = '20px';
+container.appendChild(title);
+
+// Subtitle
+const subtitle = document.createElement('p');
+subtitle.textContent = 'We build amazing web experiences with JavaScript.';
+subtitle.style.fontSize = '1.2rem';
+subtitle.style.maxWidth = '500px';
+subtitle.style.marginBottom = '30px';
+container.appendChild(subtitle);
+
+// Call-to-action button
+const button = document.createElement('button');
+button.textContent = 'Get Started';
+button.style.padding = '12px 25px';
+button.style.fontSize = '1rem';
+button.style.border = 'none';
+button.style.borderRadius = '5px';
+button.style.backgroundColor = '#ff7e5f';
+button.style.color = '#fff';
+button.style.cursor = 'pointer';
+button.style.transition = 'background 0.3s ease';
+button.onmouseover = () => button.style.backgroundColor = '#feb47b';
+button.onmouseout = () => button.style.backgroundColor = '#ff7e5f';
+container.appendChild(button);
+
+// Footer
+const footer = document.createElement('footer');
+footer.textContent = '© ' + new Date().getFullYear() + ' My Company. All rights reserved.';
+footer.style.position = 'absolute';
+footer.style.bottom = '15px';
+footer.style.fontSize = '0.9rem';
+footer.style.opacity = '0.8';
+document.body.appendChild(footer);
+
+// Button click action
+button.addEventListener('click', () => {
+    alert('Thank you for getting started!');
+});
+</script>
+</body>
+</html>
+
+
+<!-- How It Works
+
+No HTML content — everything is created with JavaScript (document.createElement).
+Inline styling — all CSS is applied via element.style.
+Responsive layout — uses flexbox for centering.
+Interactive button — hover effect and click alert.
+
+
+✅ You can copy-paste this into a .html file and open it in your browser — it will run without any extra files.
+If you want, I can also make a more advanced version with animations, smooth scrolling, and multiple sections — still 100% JavaScript-generated.
+Do you want me to make that upgraded animated version? -->

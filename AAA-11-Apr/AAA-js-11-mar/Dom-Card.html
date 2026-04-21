@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"></hjaavaead>
+    <title>Create Input and Button with onclick</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        input, button {
+            padding: 10px;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+    </style>
+
+<div id="container"></div>
+
+<script>
+    // Function to handle button click
+    function handleClick(inputElement) {
+        const value = inputElement.value.trim();
+        if (value) {
+            alert("You entered: " + value);
+        } else {
+            alert("Please enter something!");
+        }
+    }
+
+    // Create input element
+    const input = document.createElement("input");
+    input.type = "text";
+    input.placeholder = "Type something...";
+
+    // Create button element
+    const button = document.createElement("button");
+    button.textContent = "Show Input";
+
+    // Attach onclick event, passing the input element
+    // button.onclick = function () {
+    //     handleClick(input);
+    // };
+
+    // Append elements to container
+    const container = document.getElementById("container");
+    container.appendChild(input);
+    container.appendChild(button);
+</script>
+
+</body>
+</html>
+
+

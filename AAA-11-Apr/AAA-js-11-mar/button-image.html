@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Button with Image (JavaScript)</title>
+    <style>
+        /* Optional styling */
+        button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+            padding: 0;
+        }
+        button img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+<div id="container"></div>
+
+<script>
+try {
+    // Create a button element
+    const btn = document.createElement("button");
+
+    // Create an image element
+    const img = document.createElement("img");
+    img.src = "https://via.placeholder.com/50"; // Replace with your image URL
+    img.alt = "Button Icon";
+
+    // Append image to button
+    btn.appendChild(img);
+
+    // Add click event
+    btn.addEventListener("click", () => {
+        alert("Button clicked!");
+    });
+
+    // Append button to container
+    document.getElementById("container").appendChild(btn);
+
+} catch (error) {
+    console.error("Error creating button with image:", error);
+}
+</script>
+
+</body>
+</html>
+
+
+How It Works
+
+document.createElement("button") → Creates a button dynamically.
+document.createElement("img") → Creates an image element.
+btn.appendChild(img) → Places the image inside the button.
+Event Listener → Handles clicks on the button.
+Error Handling → Ensures script won’t break if something fails.
+
+
+✅ This method works in pure JavaScript without any libraries.
+If you want, I can also show you how to set a background image on a button instead of placing an <img> tag inside it.
+Do you want me to give you that background-image button version too?

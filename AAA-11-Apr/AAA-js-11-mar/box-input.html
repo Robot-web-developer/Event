@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box-input-button</title>
+    <style>
+        /* Adding a little style so you can see the "Box" */
+        #savedValues {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Box-input-button</h1>
+    <p>Add values in box through the input and pressing button</p>
+    
+    <input type="text" id="inputText" placeholder="Enter text here">
+    <button id="saveBtn">Save Value</button>
+
+    <div id="savedValues"></div>
+
+    <script> 
+        const input = document.getElementById('inputText');
+        const saveBtn = document.getElementById('saveBtn');
+        const savedValuesDiv = document.getElementById('savedValues');
+
+        // Fixed the arrow function syntax and the comma
+        saveBtn.addEventListener('click', () => {
+            const value = input.value.trim();
+            
+            if (value) {
+                const p = document.createElement('p');
+                p.textContent = value;
+                savedValuesDiv.appendChild(p);
+                input.value = ''; // Clear input after saving
+            } else {
+                alert("Please enter some text!");
+            }
+        });
+    </script>
+
+</body>
+</html>

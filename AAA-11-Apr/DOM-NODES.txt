@@ -1,0 +1,28 @@
+Root node − The document node is a root node.
+
+Parent node − Each node has a single parent node. The root node doesn't have any parent node.
+
+Child node − Each node can have multiple and nested childrenders.
+
+Sibling node − The sibling nodes are at the same level, having the same parent node.
+
+<html> is a root node, and it doesn't have a parent node.
+
+The <html> node contains two child elements: <body> and <head>.
+
+The <head> element contains the single child element: <title>.
+
+The <title> node contains the single <text> node.
+
+The <body> element contains the single child node: <div>.
+
+The <div> node contains two child nodes: <h2> and <p>.
+
+<h2> and <p> are siblings.
+
+The parent of the <h2> and <p> is <div> node.
+
+The parent of the <div> node is <body> node.
+
+
+

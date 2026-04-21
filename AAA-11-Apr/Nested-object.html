@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Nested-object </title>
+</head>
+<body>
+
+   <h1> Nested-object </h1>
+    <script>  
+    const userProfile = {
+  id: 101,
+  personalInfo: {
+    firstName: "Jane",
+    lastName: "Doe",
+    contact: {
+      email: "jane.doe@example.com",
+      phone: "555-0199"
+    }
+  },
+  preferences: {
+    theme: "dark",
+    notifications: true
+  }
+};
+
+console.log(userProfile.personalInfo.contact.email); // "jane.doe@example.com"
+
+
+</script>
+</body>
+</html>

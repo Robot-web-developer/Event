@@ -1,0 +1,104 @@
+The JavaScript DOM (Document Object Model) provides a large set of methods to interact with and manipulate HTML and XML documents.
+Here’s a well-organized list of the most important and commonly used DOM methods — grouped by functionality.
+
+1. Element Selection
+Javascriptdocument.getElementById(id)
+document.getElementsByClassName(className)
+document.getElementsByTagName(tagName)
+document.getElementsByName(name)
+document.querySelector(cssSelector)
+document.querySelectorAll(cssSelector)
+
+
+2. Element Creation & Insertion
+Javascriptdocument.createElement(tagName)
+document.createTextNode(text)
+document.createDocumentFragment()
+
+parent.appendChild(node)
+parent.insertBefore(newNode, referenceNode)
+parent.append(newNode1, newNode2, ...)
+parent.prepend(newNode1, newNode2, ...)
+element.insertAdjacentElement(position, element)
+element.insertAdjacentHTML(position, htmlString)
+element.insertAdjacentText(position, text)
+
+Positions: "beforebegin", "afterbegin", "beforeend", "afterend"
+
+3. Element Removal & Replacement
+Javascriptparent.removeChild(child)
+element.remove()
+parent.replaceChild(newChild, oldChild)
+
+
+4. Attribute Methods
+Javascriptelement.getAttribute(name)
+element.setAttribute(name, value)
+element.hasAttribute(name)
+element.removeAttribute(name)
+
+
+5. Class & Style Manipulation
+Javascriptelement.classList.add(className1, className2, ...)
+element.classList.remove(className1, ...)
+element.classList.toggle(className, force)
+element.classList.contains(className)
+
+element.style.propertyName = value
+
+
+6. Content Manipulation
+Javascriptelement.innerHTML        // Get/Set HTML content
+element.outerHTML        // Get/Set HTML including element itself
+element.textContent      // Get/Set text content
+element.innerText        // Get/Set visible text
+
+
+7. Traversing the DOM
+Javascriptelement.parentNode
+element.parentElement
+element.children
+element.childNodes
+element.firstChild
+element.lastChild
+element.firstElementChild
+element.lastElementChild
+element.nextSibling
+element.previousSibling
+element.nextElementSibling
+element.previousElementSibling
+
+
+8. Event Handling
+Javascriptelement.addEventListener(event, handler, options)
+element.removeEventListener(event, handler, options)
+element.dispatchEvent(event)
+
+
+9. Document & Window Methods
+Javascriptdocument.write(htmlString)
+document.open()
+document.close()
+document.createEvent(type)
+document.execCommand(command)
+
+window.alert(message)
+window.confirm(message)
+window.prompt(message, defaultValue)
+
+
+10. Node Information
+Javascriptnode.nodeName
+node.nodeType
+node.nodeValue
+node.hasChildNodes()
+node.cloneNode(deep)
+
+
+✅ Tip:
+The DOM API is huge — these are the most used methods.
+For a full reference, check the official MDN documentation:
+MDN DOM Reference
+
+If you want, I can prepare a cheat sheet with examples for each DOM method so you can practice them directly in the browser.
+Do you want me to make that?

@@ -1,0 +1,39 @@
+-&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Box-input-button&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    <h1>Box-input-button</h1>
+    <p>Add values in box through the input and pressing button</p>
+    
+    &lt;!-- Corrected input: placeholder inside the tag, no extra "&gt;" or ";" --&gt;
+    &lt;input type="text" id="inputText" placeholder="Enter text here"&gt;
+
+    &lt;!-- Fixed button id and removed semicolon --&gt;
+    &lt;button id="saveBtn"&gt;Save&lt;/button&gt;
+
+    &lt;!-- Corrected div tag --&gt;
+    &lt;div id="savedValues"&gt;
+
+    &lt;script&gt;
+      // Grab elements by correct IDs
+      const input = document.getElementById('inputText');
+      const saveBtn = document.getElementById('saveBtn');
+      const savedValuesDiv = document.getElementById('savedValues');
+
+      // Fixed syntax for addEventListener
+      saveBtn.addEventListener('click', () =&gt; {
+        const value = input.value.trim();
+        if (value) {
+          const p = document.createElement('p');
+          p.textContent = value;
+          savedValuesDiv.appendChild(p);
+          input.value = ''; // clear input after saving
+        }
+      });
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;

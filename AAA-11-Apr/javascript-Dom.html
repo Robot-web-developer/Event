@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> JavaScript DOM </title>
+</head>
+<body>
+    
+    <div class ="main">
+     <h1> 0 </h1>    
+    
+         Welcome to JavaScript DOM!
+        
+    </div>
+
+     <div class ="main">
+        <h1> 1 </h1>
+         
+         JavaScript DOM!
+        
+    </div>
+
+
+     <script type="text/javascript"> 
+    var x = document.getElementById("main");
+    (x[1]).innerHTML = "<h1> 1  Welcome to JavaScript DOM! </h1>";
+        console.log(x); 
+
+         var x = document.getElementById("main");
+    (x[0]).innerHTML = " <h2> 2 JavaScript DOM!  </h2>";
+        console.log(x);
+
+         //[0].innerHTML = "<h1 style= \"color: red\">  My JavaScript DOM! </h1>";
+        //var x = document.getElementsByClassName("main");
+        //x[0].innerHTML;
+        //alert(x);
+        //console.log(x[0]);
+
+
+
+
+
+        //alert("Welcome to JavaScript DOM!");
+        //document.writeln("This is a simple example of using the DOM in JavaScript.");
+        //var heading = document.createElement("h1");
+        //heading.textContent = "Hello, World!";
+        //document.body.appendChild(heading);
+        //var paragraph = document.createElement("p");
+        //paragraph.textContent = "This is a paragraph created using the DOM.";
+        //document.body.appendChild(paragraph);
+
+
+
+    </script>
+</body>
+</html>

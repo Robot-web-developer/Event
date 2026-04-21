@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  DOM Node Navigation Example  </title>
+</head>
+<body>
+    <div id="container">
+    <p id="first">First paragraph</p>
+    <p id="second">Second paragraph</p>
+    <p id="third">Third paragraph</p>
+  </div>
+
+  <script>
+    // Get a reference to the second paragraph
+    const secondPara = document.getElementById("second");
+
+    // parentNode
+    console.log("Parent Node:", secondPara.parentNode);
+
+    // childNodes (includes text nodes like whitespace)
+    console.log("Child Nodes of container:", secondPara.parentNode.childNodes);
+
+    // firstChild
+    console.log("First Child of container:", secondPara.parentNode.firstChild);
+
+    // lastChild
+    console.log("Last Child of container:", secondPara.parentNode.lastChild);
+
+    // nextSibling
+    console.log("Next Sibling of second paragraph:", secondPara.nextSibling);
+
+    // previousSibling
+    console.log("Previous Sibling of second paragraph:", secondPara.previousSibling);
+
+    // TIP: To skip text nodes (whitespace), use element-specific properties:
+    console.log("Next Element Sibling:", secondPara.nextElementSibling);
+    console.log("Previous Element Sibling:", secondPara.previousElementSibling);
+  </script>
+</body>
+</html>
+
+  
+
+<!-- Here’s a clear and runnable JavaScript example showing how to navigate between DOM nodes using the properties you mentioned:-->
+<!--Html -->
+<!-- Key Points:
+
+parentNode → Gets the immediate parent node.
+childNodes → Returns a NodeList of all child nodes (including text nodes like whitespace).
+firstChild / lastChild → Gets the first/last child node (could be a text node).
+nextSibling / previousSibling → Gets the next/previous node at the same level (could be a text node).
+nextElementSibling / previousElementSibling → Skips text nodes and returns only element nodes (often more useful in practice).
+
+If you want, I can give you a version that ignores text nodes so navigation is cleaner for real-world DOM work.
+Do you want me to prepare that? -->
